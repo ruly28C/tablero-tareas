@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablero de tareas</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Tablero de tareas</h1>
+    <p class="subtitulo">Proyecto del taller de Git y GitHub</p>
+    <!-- Zona C: botón de tema -->
+  </header>
+
+  <main>
+    <section class="nueva-tarea">
+      <form id="formulario">
+        <input id="texto" type="text" placeholder="Escribe una tarea" required>
+        <button type="submit">Agregar</button>
+      </form>
+      <!-- Zona A: contador -->
+    </section>
+
+    <section class="tareas">
+      <ul id="lista"></ul>
+      <!-- Zona B: botón limpiar -->
+    </section>
+  </main>
+
+  <footer>
+    <h2>Equipo</h2>
+    <ul id="integrantes">
+      <li>Agrega tu nombre aquí</li>
+    </ul>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

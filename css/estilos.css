@@ -1,0 +1,86 @@
+:root {
+  --principal: #2a7de1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #f6f7f9;
+  color: #222;
+}
+
+header h1 {
+  color: var(--principal);
+  margin-bottom: 0;
+}
+
+.subtitulo {
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--principal);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+#lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0.6rem 0.8rem;
+  margin: 0.4rem 0;
+  border-radius: 6px;
+}
+
+#lista li span {
+  cursor: pointer;
+}
+
+#lista li.completada span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.borrar {
+  background: #d9534f;
+  padding: 0.3rem 0.6rem;
+}
+
+footer {
+  margin-top: 2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}

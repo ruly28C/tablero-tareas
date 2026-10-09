@@ -1,0 +1,37 @@
+# Revisión automática: corre en cada push a main y en cada pull request.
+# Es el ejemplo de "pipeline" del taller. En proyectos reales aquí
+# se corren pruebas, se revisa el código y se despliega (CI/CD).
+name: Revisión automática
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v5
+
+      - name: Verificar que los archivos principales existan
+        run: |
+          test -f index.html
+          test -f README.md
+          test -f css/estilos.css
+          test -f js/app.js
+          echo "Archivos principales: OK"
+
+      - name: Verificar que index.html tenga título
+        run: |
+          grep -q "<title>" index.html
+          echo "Título: OK"
+
+      - name: Verificar que no queden marcas de conflicto
+        run: |
+          if grep -rn "^<<<<<<<\|^>>>>>>>" --include="*.html" --include="*.css" --include="*.js" . ; then
+            echo "Quedaron marcas de conflicto en el código"
+            exit 1
+          fi
+          echo "Sin marcas de conflicto: OK"
