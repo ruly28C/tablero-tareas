@@ -76,3 +76,10 @@ document.getElementById('limpiar').addEventListener('click', () => {
 
 // ===== Zona C: tema oscuro (sesión 2) =====
 
+const botonTema = document.getElementById('tema');
+if (localStorage.getItem('tema') === 'oscuro') document.body.classList.add('oscuro');
+botonTema.addEventListener('click', () => {
+  document.body.classList.toggle('oscuro');
+  localStorage.setItem('tema', document.body.classList.contains('oscuro') ? 'oscuro' : 'claro');
+});
+
