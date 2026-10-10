@@ -13,8 +13,14 @@ Abre `index.html` en el navegador. No necesita instalar nada.
 ## Equipo
 
 - Raúl Ortega
+- Francisco
+- Brisa
 
 ## Funciones agregadas en el taller
+
+- Limpiar tareas finalizadas - Raul
+- Tema oscuro -  Francisco
+- Y otra cosa - Brisa
 
 ## Cómo usarlo
 
@@ -25,3 +31,5 @@ Abre `index.html` en el navegador. No necesita instalar nada.
 Repositorio: [tablero-tareas](https://github.com/ruly28C/tablero-tareas)
 
 - (se llena en la sesión 2)
+
+Link de la pagina del proyecto GitHub Pages: https://ruly28c.github.io/tablero-tareas/
